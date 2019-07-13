@@ -1,0 +1,3 @@
+#!/bin/sh
+echo excute pre-push hook..
+yarn test 

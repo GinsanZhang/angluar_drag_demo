@@ -1,2 +1,3 @@
 #!/bin/sh
+echo excute pre-commit hook..
 yarn lint 
