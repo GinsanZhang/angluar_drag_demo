@@ -110,6 +110,15 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/cdk@~8.0.2":
+  version "8.0.2"
+  resolved "https://registry.npm.taobao.org/@angular/cdk/download/@angular/cdk-8.0.2.tgz#599b7fd06caed8cbea41f8f7874ddcea5dfc99ce"
+  integrity sha1-WZt/0Gyu2MvqQfj3h03c6l38mc4=
+  dependencies:
+    tslib "^1.7.1"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~8.1.0":
   version "8.1.0"
   resolved "https://registry.npm.taobao.org/@angular/cli/download/@angular/cli-8.1.0.tgz#db96f1a84f9f7fc7225b426ca5cdd3dbcb0b99da"
@@ -183,6 +192,13 @@
   version "8.1.0"
   resolved "https://registry.npm.taobao.org/@angular/language-service/download/@angular/language-service-8.1.0.tgz#6f7701ac81cfd51f7f9678d9952af0672c8f7d7d"
   integrity sha1-b3cBrIHP1R9/lnjZlSrwZyyPfX0=
+
+"@angular/material@^8.0.2":
+  version "8.0.2"
+  resolved "https://registry.npm.taobao.org/@angular/material/download/@angular/material-8.0.2.tgz#c648e0f52d94b37e3dddfd879223202aa0d11587"
+  integrity sha1-xkjg9S2Us3493f2HkiMgKqDRFYc=
+  dependencies:
+    tslib "^1.7.1"
 
 "@angular/platform-browser-dynamic@~8.1.0":
   version "8.1.0"
@@ -5363,7 +5379,7 @@ parse5@4.0.0:
   resolved "https://registry.npm.taobao.org/parse5/download/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
   integrity sha1-bXhlbj2o14tOwLkG98CO8d/j9gg=
 
-parse5@5.1.0:
+parse5@5.1.0, parse5@^5.0.0:
   version "5.1.0"
   resolved "https://registry.npm.taobao.org/parse5/download/parse5-5.1.0.tgz#c59341c9723f414c452975564c7c00a68d58acd2"
   integrity sha1-xZNByXI/QUxFKXVWTHwApo1YrNI=
@@ -7034,7 +7050,7 @@ ts-node@~7.0.0:
     source-map-support "^0.5.6"
     yn "^2.0.0"
 
-tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
   resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.10.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslib%2Fdownload%2Ftslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha1-w8GflZc/sKYpc/sJ2Q2WHuQ+XIo=
