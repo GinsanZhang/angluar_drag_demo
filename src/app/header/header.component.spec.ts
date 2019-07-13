@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { HeaderComponent } from './header.component';
+import { MatToolbar } from '@angular/material';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -11,9 +12,9 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [HeaderComponent, MatToolbar]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
