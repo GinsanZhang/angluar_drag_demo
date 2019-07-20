@@ -1,0 +1,15 @@
+<div class="example-boundary">
+  <div #card class="example-box" cdkDragBoundary=".example-boundary" cdkDrag (cdkDragMoved)="moved($event)">
+    <mat-icon>face</mat-icon>
+  </div>
+</div>
+
+<span>
+  x:{{x}}
+</span>
+<span>
+  y:{{y}}
+</span>
+<span>
+  {{position}}
+</span>

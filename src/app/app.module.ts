@@ -6,11 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatSidenavModule, MatChipsModule } from '@angular/material';
 import { HeaderComponent } from './header/header.component';
-
+import { DndDemoComponent } from './dnd-demo/dnd-demo.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
    declarations: [
       AppComponent,
-      HeaderComponent
+      HeaderComponent,
+      DndDemoComponent
    ],
    imports: [
       BrowserModule,
@@ -18,7 +21,9 @@ import { HeaderComponent } from './header/header.component';
       BrowserAnimationsModule,
       MatToolbarModule,
       MatSidenavModule,
-      MatChipsModule
+      MatChipsModule,
+      DragDropModule,
+      MatIconModule,
    ],
    providers: [],
    bootstrap: [
