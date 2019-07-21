@@ -6,24 +6,11 @@
   <mat-sidenav-content class="right-panel">
     <div class="wrapper">
       <div class="example-boundary">
-        <div
-          class="top-mask"
-          cdkDropList
-          #viewList="cdkDropList"
-          [cdkDropListData]="cards"
-          (cdkDropListDropped)="drop($event)"
-        ></div>
-        <div
-          *ngFor="let card of cards"
-          class="example-box"
-          cdkDragBoundary=".example-boundary"
-          cdkDrag
-          (cdkDragMoved)="moved($event)"
-          [cdkDragFreeDragPosition]="{ x: card._x, y: card._y }"
-          [title]="card.name"
-        >
-          <mat-icon [color]="card.color" [title]="card.name" [inline]="false"
-            >face
+        <div class="top-mask" cdkDropList #viewList="cdkDropList" [cdkDropListData]="cards"
+          (cdkDropListDropped)="drop($event)"></div>
+        <div *ngFor="let card of cards" class="example-box" cdkDragBoundary=".example-boundary" cdkDrag
+          (cdkDragMoved)="moved($event)" [cdkDragFreeDragPosition]="{ x: card._x, y: card._y }" [title]="card.name">
+          <mat-icon [color]="card.color" [title]="card.name" [inline]="false">face
           </mat-icon>
           <a> {{ card.name }}</a>
         </div>
@@ -36,8 +23,8 @@
           <pre class="code-preview"> {{ cards | json }}</pre>
         </mat-card-content>
         <mat-card-actions [align]="'end'">
-            <button mat-button (click)="onClear()" color="accent">Clear</button>
-          </mat-card-actions>
+          <button mat-button (click)="onClear()" color="accent">Clear</button>
+        </mat-card-actions>
       </mat-card>
     </div>
   </mat-sidenav-content>

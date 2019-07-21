@@ -1,15 +1,12 @@
-/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {
   MatChipList,
-  MatChip,
-  CdkDragDrop,
-  CdkDropList
+  MatChip
 } from '@angular/material';
 
 import { CardBacklogComponent } from './card-backlog.component';
+import { CdkDropList } from '@angular/cdk/drag-drop';
 
 describe('Card_backlogComponent', () => {
   let component: CardBacklogComponent;
@@ -20,7 +17,6 @@ describe('Card_backlogComponent', () => {
       declarations: [
         CardBacklogComponent,
         MatChipList,
-        CdkDragDrop,
         CdkDropList,
         MatChip
       ],

@@ -1,13 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
-/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-import {
-  CdkDragDrop,
-  CdkDropList
-} from '@angular/material';
 import { DndDemoComponent } from './dnd-demo.component';
+import { CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 
 describe('DndDemoComponent', () => {
   let component: DndDemoComponent;
@@ -15,10 +9,10 @@ describe('DndDemoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DndDemoComponent,CdkDropList],
+      declarations: [DndDemoComponent, CdkDropList, CdkDrag],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

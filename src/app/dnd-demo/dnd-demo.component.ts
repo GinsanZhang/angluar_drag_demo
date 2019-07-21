@@ -1,12 +1,9 @@
 import {
   Component,
   OnInit,
-  ViewChild,
-  ElementRef,
   AfterViewInit
 } from '@angular/core';
 import { CdkDragDrop, copyArrayItem } from '@angular/cdk/drag-drop';
-import { getMatAutocompleteMissingPanelError } from '@angular/material';
 @Component({
   selector: 'app-dnd-demo',
   templateUrl: './dnd-demo.component.html',
@@ -23,9 +20,9 @@ export class DndDemoComponent implements OnInit, AfterViewInit {
       y: 0
     }
   ];
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   ngAfterViewInit(): void {
     console.log('after view  init');
