@@ -1,25 +1,43 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer2 } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  AfterViewInit
+} from '@angular/core';
+import { CdkDragDrop, copyArrayItem } from '@angular/cdk/drag-drop';
+import { getMatAutocompleteMissingPanelError } from '@angular/material';
 @Component({
   selector: 'app-dnd-demo',
   templateUrl: './dnd-demo.component.html',
   styleUrls: ['./dnd-demo.component.scss']
 })
 export class DndDemoComponent implements OnInit, AfterViewInit {
+  cards = [
+    {
+      name: 'ginsan',
+      color: 'primary',
+      _x: Math.floor(Math.random() * 100),
+      _y: Math.floor(Math.random() * 100),
+      x: 0,
+      y: 0
+    }
+  ];
+  constructor() {}
 
-  @ViewChild('card', { static: false }) card: ElementRef;
-  x = Math.floor(Math.random() * 100);
-  y = Math.floor(Math.random() * 100);
-  constructor() { }
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
   ngAfterViewInit(): void {
-    const cardDom = this.card.nativeElement;
-    cardDom.style.transform = `translate3d(${this.x}px, ${this.y}px, 0px)`;
+    console.log('after view  init');
   }
+
   moved(moved: any) {
-    console.log('drag ended');
-    const transform = this.card.nativeElement.style.transform;
-    const matchIter = transform.matchAll(/translate3d\((-?\d+)px,\s(-?\d+)px,\s-?\d+px\)/g);
+    const name = moved.source.element.nativeElement.title;
+    console.log('move:' + name);
+    const transform = moved.source.element.nativeElement.style.transform;
+    const matchIter = transform.matchAll(
+      /translate3d\((-?\d+)px,\s(-?\d+)px,\s-?\d+px\)/g
+    );
     let regRsult = matchIter.next();
     let xTemp = 0;
     let yTemp = 0;
@@ -30,7 +48,24 @@ export class DndDemoComponent implements OnInit, AfterViewInit {
       yTemp += value.hasOwnProperty(2) ? Number.parseInt(value[2], 0) : 0;
       regRsult = matchIter.next();
     }
-    this.x = xTemp;
-    this.y = yTemp;
+    const card = this.cards.find(it => it.name === name);
+    card.x = xTemp;
+    card.y = yTemp;
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    console.log('drop');
+    if (event.previousContainer !== event.container) {
+      copyArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    }
+  }
+
+  onClear() {
+    this.cards = [];
   }
 }

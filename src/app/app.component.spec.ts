@@ -18,8 +18,6 @@ describe('AppComponent', () => {
         HeaderComponent,
         MatSidenavContainer,
         MatSidenav,
-        MatChipList,
-        MatChip,
         MatSidenavContent
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]

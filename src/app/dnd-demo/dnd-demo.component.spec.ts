@@ -3,7 +3,10 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-
+import {
+  CdkDragDrop,
+  CdkDropList
+} from '@angular/material';
 import { DndDemoComponent } from './dnd-demo.component';
 
 describe('DndDemoComponent', () => {
@@ -12,7 +15,7 @@ describe('DndDemoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DndDemoComponent],
+      declarations: [ DndDemoComponent,CdkDropList],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();

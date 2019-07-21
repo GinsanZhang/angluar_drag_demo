@@ -1,0 +1,18 @@
+<mat-chip-list
+  class="mat-chip-list-stacked"
+  aria-label="Color selection"
+  cdkDropList
+  #backlogList="cdkDropList"
+  [cdkDropListData]="availableColors"
+  (cdkDropListDropped)="drop($event)"
+  [cdkDropListConnectedTo]="[connectTo]"
+>
+  <mat-chip
+    *ngFor="let chip of availableColors"
+    selected
+    [color]="chip.color"
+    cdkDrag
+  >
+    {{ chip.name }}
+  </mat-chip>
+</mat-chip-list>

@@ -1,14 +1,6 @@
 <app-header></app-header>
 
-<mat-sidenav-container class="container">
-    <mat-sidenav mode="side" class="left-panel" opened>
-        <mat-chip-list class="mat-chip-list-stacked" aria-label="Color selection">
-            <mat-chip *ngFor="let chip of availableColors" selected [color]="chip.color">
-                {{chip.name}}
-            </mat-chip>
-        </mat-chip-list>
-    </mat-sidenav>
-    <mat-sidenav-content class="right-panel">
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+

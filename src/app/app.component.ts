@@ -7,10 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dragDemo';
-  availableColors = [
-    { name: 'none', color: undefined },
-    { name: 'Primary', color: 'primary' },
-    { name: 'Accent', color: 'accent' },
-    { name: 'Warn', color: 'warn' }
-  ];
+
 }
