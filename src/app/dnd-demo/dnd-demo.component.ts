@@ -32,19 +32,13 @@ export class DndDemoComponent implements OnInit, AfterViewInit {
     const name = moved.source.element.nativeElement.title;
     console.log('move:' + name);
     const transform = moved.source.element.nativeElement.style.transform;
-    const matchIter = transform.matchAll(
-      /translate3d\((-?\d+)px,\s(-?\d+)px,\s-?\d+px\)/g
+    const values = transform.match(
+      /translate3d\((-?\d+)px,\s(-?\d+)px,\s-?\d+px\)/
     );
-    let regRsult = matchIter.next();
     let xTemp = 0;
     let yTemp = 0;
-    while (!regRsult.done) {
-      const value = regRsult.value;
-      xTemp += value.hasOwnProperty(1) ? Number.parseInt(value[1], 0) : 0;
-
-      yTemp += value.hasOwnProperty(2) ? Number.parseInt(value[2], 0) : 0;
-      regRsult = matchIter.next();
-    }
+    xTemp = values.hasOwnProperty(1) ? Number.parseInt(values[1], 0) : 0;
+    yTemp = values.hasOwnProperty(2) ? Number.parseInt(values[2], 0) : 0;
     const card = this.cards.find(it => it.name === name);
     card.x = xTemp;
     card.y = yTemp;
