@@ -6,14 +6,18 @@
   <mat-sidenav-content class="right-panel">
     <div class="wrapper">
       <div class="example-boundary">
-        <div class="top-mask" cdkDropList #viewList="cdkDropList" [cdkDropListData]="cards"
-          (cdkDropListDropped)="drop($event)"></div>
-        <div *ngFor="let card of cards" class="example-box" cdkDragBoundary=".example-boundary" cdkDrag
+       <div class="aixs">
+         <div class="aix-x"><mat-icon fontSet="fa" fontIcon="fa-play"></mat-icon></div>
+         <div class="aix-y"><mat-icon fontSet="fa" fontIcon="fa-play"></mat-icon></div>
+        <div class="top-mask" cdkDropList #viewList="cdkDropList" [cdkDropListData]="cards" (cdkDropListDropped)="drop($event)">
+        </div>
+        <div *ngFor="let card of cards" class="example-box" cdkDragBoundary=".aixs" cdkDrag
           (cdkDragMoved)="moved($event)" [cdkDragFreeDragPosition]="{ x: card._x, y: card._y }" [title]="card.name">
           <mat-icon [color]="card.color" [title]="card.name" [inline]="false">face
           </mat-icon>
           <a> {{ card.name }}</a>
         </div>
+       </div>
       </div>
       <mat-card>
         <mat-card-header>

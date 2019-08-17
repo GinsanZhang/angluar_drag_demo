@@ -1,3 +1,11 @@
+.stacked-list  {
+  display: flex;
+  flex-direction: column;
+}
+
 mat-chip {
-  max-width: 200px;
+  width: 200px;
+  height: 60px;
+  margin: 8px;
+  border-radius: 5px;
 }
