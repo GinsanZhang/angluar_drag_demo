@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
 import { MatSidenavContainer, MatSidenav, MatChipList, MatChip, MatSidenavContent } from '@angular/material';
 
-describe('AppComponent', () => {
+xdescribe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
